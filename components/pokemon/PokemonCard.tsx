@@ -14,12 +14,12 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
     const router = useRouter()
 
     const handleClick = () => {
-        router.push(`/pokemon/${id}`)
+        router.push(`/pokemon/${pokemon.id}`)
     }
 
   return (
-    <Grid xs={6} sm={3} md={2} xl={1} key={id}> 
-      <Card isHoverable variant="bordered" isPressable onClick={ handleClick }>
+    <Grid xs={6} sm={3} md={2} key={id}> 
+      <Card isHoverable isPressable onClick={ handleClick } css={{backgroundColor: "#000000"}}>
         <Card.Body css={{ p: 1 }}>
           <Card.Image src={img} width="100%" height={140} />
         </Card.Body>
